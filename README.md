@@ -8,7 +8,7 @@ React's render cycle is a fundamental concept that every React developer should 
 
 ### 1. Trigger Phase
 
-The trigger phase is initiated when there's a change in the component's state or props. This can happen due to various reasons:
+The <mark>trigger phase</mark> is initiated when there's a change in the component's state or props. This can happen due to various reasons:
 
 - The initial render when the component first loads
 - A state update using `useState`
@@ -18,11 +18,15 @@ When any of these occur, React schedules a re-render of the component.[1]
 
 ### 2. Render Phase
 
-During the render phase, React compares the new virtual DOM with the previous one. It determines what changes need to be made to the actual DOM. This process is known as reconciliation. React doesn't touch the actual DOM during this phase; it just calculates the differences.[5]
+<mark>During the render phase, React compares the new virtual DOM with the previous one</mark>. It determines what changes need to be made to the actual DOM.
+
+This process is known as **reconciliation**. React doesn't touch the actual DOM during this phase; it just calculates the differences.[5]
 
 ### 3. Commit Phase
 
-The commit phase is where React actually updates the DOM based on the changes identified in the render phase. It applies only the necessary changes to the DOM, ensuring efficient updates. It's important to note that React may go through the render phase but not commit if the component returns the same result as the last render.[5]
+The <mark>commit phase is where React actually updates the DOM based on the changes identified in the render phase</mark>.
+
+It applies only the necessary changes to the DOM, ensuring efficient updates. It's important to note that React may go through the render phase but not commit if the component returns the same result as the last render.[5]
 
 ## Observing the Render Cycle
 
@@ -174,14 +178,14 @@ This example shows `useEffect` with `inputValue` as a dependency. The effect run
 
 ## Conclusion
 
-Understanding React's render cycle and how different hooks interact with it is crucial for building efficient React applications. By using tools like `useRef`, `useEffect`, and `useState` judiciously, developers can control when and how components update, leading to better performance and user experience.
+Understanding React's render cycle and how different hooks interact with it is crucial for building efficient React applications. By using tools like `useRef`, `useEffect`, and `useState` judiciously, **you will control when and how components update, leading to better performance and user experience**.
 
 Remember:
 - Use `useRef` for values that shouldn't trigger re-renders
 - Be cautious with `useEffect` dependencies to avoid infinite loops
 - Consider the implications of state updates on the render cycle
 
-By mastering these concepts, you'll be better equipped to optimize your React applications and understand the intricacies of component lifecycle and rendering.
+> Understanding the **whole render cycle and lifecycle stuff** is key. It’ll help you avoid those pesky bugs and performance hiccups; once you’ve got this down, you’ll be rocking your React projects.
 
 Citations:
 [1] https://www.fullstackfoundations.com/blog/react-component-lifecycle
