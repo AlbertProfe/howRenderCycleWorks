@@ -1,0 +1,25 @@
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+
+.card {
+  padding: 2em;
+}
+
+.read-the-docs {
+  color: #888;
+}
+
+.read-the-docs a {
+  color: #666; /* Slightly darker grey for the link */
+  text-decoration: none; /* Optional: removes underline */
+}
+
+.read-the-docs a:hover {
+  color: #444; /* Optional: darker on hover for better interaction */
+  text-decoration: underline; /* Optional: adds underline on hover */
+}
