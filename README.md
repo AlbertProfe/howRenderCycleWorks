@@ -2,6 +2,8 @@
 
 React's render cycle is a fundamental concept that every React developer should understand. It consists of three main phases: trigger, render, and commit. Let's explore each phase and see how we can observe them using different hooks like `useRef`, `useEffect`, and `useState`.
 
+![Understanding React's Render Cycle: Trigger, Render, and Commit](https://raw.githubusercontent.com/AlbertProfe/howRenderCycleWorks/refs/heads/main/src/assets/render-cycle.png)
+
 ## The Render Cycle
 
 ### 1. Trigger Phase
